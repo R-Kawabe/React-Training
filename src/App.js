@@ -1,7 +1,3 @@
-// TopPage:Webサイトを開いて最初に表示させたおいページ
-// MapPage:生物規範工学のようなMap検索ページ
-// KeySearchPage:キーワード入力などから検索したいページ
-
 import React, { Component } from 'react';
 import TopPage from './Page/TopPage';
 import MapPage from './Page/MapPage';
@@ -15,8 +11,7 @@ export default class App extends Component {
     }
 
     render() {
-        const Address = this.page;
-        switch (Address) {
+        switch (this.page) {
             case "Map":
                 return (<MapPage></MapPage>);
             case "KeySearch":

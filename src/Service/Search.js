@@ -1,11 +1,20 @@
-// import SolutionCase from "../Entity/SolutionCase";
-// import Problem from "../Entity/Problem";
-// import Objective from "../Entity/Objective";
-// import Subject from "../Entity/Subject";
-// import Tag from "../Entity/Tag";
-
-// export default class SearchSearvice{
-//     constructor(props){
-
-//     }
-// }
+export default class SearchSearvice {
+    /**
+     * 
+     * @returns {Promise<Object>}
+     */
+    async fetchData() {
+        const url = '../../public/page.json';
+        const res = await fetch(url, { method: "GET" });
+        if (!res.ok) {
+            throw new Error(`error(${res.status}/${res.statusText})`);
+        }
+        return await res.json();
+    }
+    /**
+     * @returns {Object<string,string>}
+     */
+    getList() {
+        return this.fetchData();
+    }
+}

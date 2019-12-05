@@ -1,7 +1,5 @@
-[
-    {
-        "キーワード検索": "KeySearch",
-        "マップ検索": "Map",
-        "SPARQL検索": "SPARQL"
-    }
-]
+{
+    "keySearch": "キーワード",
+    "Map": "マップ",
+    "SPARQL": "SPARQL検索"
+}
