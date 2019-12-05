@@ -7,15 +7,22 @@ import TopPage from './Page/TopPage';
 import MapPage from './Page/MapPage';
 import KeySearchPage from './Page/KeySearchPage';
 
-export default class App extends Comment {
+export default class App extends Component {
     constructor(props) {
         super(props);
-        // this.situationId = location.search.replace(/^\?/, '');
+        // eslint-disable-next-line no-restricted-globals
+        this.page = location.search.replace(/^\?/, '');
     }
 
     render() {
-        return (
-            //ここにページ分岐を書けばいい？
-        );
+        const Address = this.page;
+        switch (Address) {
+            case "Map":
+                return (<MapPage></MapPage>);
+            case "KeySearch":
+                return (<KeySearchPage></KeySearchPage>);
+            default:
+                return (<TopPage></TopPage>);
+        }
     }
 }
