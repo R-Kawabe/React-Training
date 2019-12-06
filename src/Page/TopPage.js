@@ -13,10 +13,8 @@ export default class TopPage extends Component {
         this.setState(list);
     }
 
-    render() {
-        const list = this.state;
-        return (<ul>
-            {Object.keys(list).map(k => <li key={k}><a href={`?${k}`}>{list[k]}</a></li>)}
-        </ul>);
+    render() {//ページ遷移はReact-Routerを使おう！
+        //Routerのタグを使って遷移したいページのリンクを貼る
+        return (<div>test</div>);
     }
 }

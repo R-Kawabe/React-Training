@@ -11,13 +11,7 @@ export default class App extends Component {
     }
 
     render() {
-        switch (this.page) {
-            case "Map":
-                return (<MapPage></MapPage>);
-            case "KeySearch":
-                return (<KeySearchPage></KeySearchPage>);
-            default:
-                return (<TopPage></TopPage>);
-        }
+        return (<MapPage></MapPage>);
     }
+
 }
