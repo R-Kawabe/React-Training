@@ -1,20 +1,5 @@
 export default class SearchSearvice {
-    /**
-     * 
-     * @returns {Promise<Object>}
-     */
-    async fetchData() {
-        const url = '../../public/page.json';
-        const res = await fetch(url, { method: "GET" });
-        if (!res.ok) {
-            throw new Error(`error(${res.status}/${res.statusText})`);
-        }
-        return await res.json();
-    }
-    /**
-     * @returns {Object<string,string>}
-     */
-    getList() {
-        return this.fetchData();
-    }
+    //各ページでの入力結果を受け取る関数
+    //各ページでのリスト選択結果を受け取る関数
+    //それぞれ受け取った値とURLを送信する関数
 }
